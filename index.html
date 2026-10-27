@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Alpha · Lyzr</title>
+<meta name="description" content="Alpha by Lyzr: an AI forward deployed engineer for every team. Applications, AI agents and automations, built, tested and live the same day.">
+<meta property="og:title" content="Alpha · Lyzr">
+<meta property="og:description" content="An AI forward deployed engineer for every team. Applications, AI agents and automations, built, tested and live the same day.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-code" viewBox="0 0 24 24"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></symbol>
+  <symbol id="i-agent" viewBox="0 0 24 24"><rect x="4" y="7" width="16" height="12" rx="3"/><path d="M12 3v4M9 12.5v1M15 12.5v1M2 12v3M22 12v3"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V11M10 20V5M16 20v-6M22 20H2"/></symbol>
+  <symbol id="i-deck" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M12 16v4M8 20h8"/></symbol>
+  <symbol id="i-video" viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="M10 9.5v5l4.5-2.5z"/></symbol>
+  <symbol id="i-diagram" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="5" rx="1"/><rect x="14" y="16" width="7" height="5" rx="1"/><path d="M6.5 8v4.5h11V16"/></symbol>
+  <symbol id="i-plug" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></symbol>
+  <symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></symbol>
+  <symbol id="i-branch" viewBox="0 0 24 24"><circle cx="6" cy="5" r="2"/><circle cx="6" cy="19" r="2"/><circle cx="18" cy="7" r="2"/><path d="M6 7v10M18 9c0 4-5 4-11 8.5"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></symbol>
+  <symbol id="i-gauge" viewBox="0 0 24 24"><path d="M4 18a8 8 0 1 1 16 0"/><path d="M12 18l4-6"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+</svg>
+
+<main class="stage" id="stage">
+
+<!-- ================= 01 · WHY ALPHA ================= -->
+
+<section class="slide cover" id="cover" data-part="why" data-title="Welcome">
+  <div class="cover-grid">
+    <div class="cover-top">
+      <img class="logo" src="assets/lyzr-lockup-duo.svg" alt="Lyzr">
+    </div>
+    <div class="cover-main">
+      <div class="cover-copy">
+        <p class="eyebrow rise" style="--i:0">An introduction</p>
+        <h1 class="rise" style="--i:0">Alpha</h1>
+        <p class="sub rise" style="--i:1">The AI forward deployed engineer for every team.</p>
+        <p class="intro rise" style="--i:2">Why your teams need it, what it builds, and how your company stays in control.</p>
+        <div class="start rise" style="--i:3"><button class="btn" data-go="next">Start <svg viewBox="0 0 24 24"><use href="#i-arrow"/></svg></button><span class="mono muted">or press →</span></div>
+      </div>
+      <div class="buildcard rise" style="--i:3" aria-hidden="true">
+        <div class="bc-bar"><span class="bc-dot"></span><span class="mono">New session</span><span class="mono bc-chip">Claude Code</span></div>
+        <div class="bc-body">
+          <p class="mono bc-who">You</p>
+          <p class="bc-prompt"><span id="bcType"></span><i class="caret"></i></p>
+          <p class="mono bc-who">Alpha</p>
+          <ul class="bc-steps">
+            <li><span class="tick"><svg><use href="#i-check"/></svg></span>Plan approved</li>
+            <li><span class="tick"><svg><use href="#i-check"/></svg></span>App, database and sign-in built</li>
+            <li><span class="tick"><svg><use href="#i-check"/></svg></span>Tests passed</li>
+            <li><span class="tick"><svg><use href="#i-check"/></svg></span>Published, behind a sign-in</li>
+          </ul>
+          <div class="bc-live"><span class="mono">Live</span><span>expense-approvals.app</span><svg viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"/></svg></div>
+        </div>
+      </div>
+    </div>
+    <div class="cover-agenda rise" style="--i:4">
+      <button data-go="why-care"><span class="mono">01</span><span>Why Alpha</span><span class="mono">4 slides</span></button>
+      <button data-go="pillars"><span class="mono">02</span><span>Alpha in action</span><span class="mono">5 slides</span></button>
+      <button data-go="control"><span class="mono">03</span><span>For your company</span><span class="mono">4 slides</span></button>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="why-care" data-part="why" data-title="Why care">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow rise" style="--i:0">Why care</p>
+      <h2 class="title rise" style="--i:1">Every team has ideas. Few get an engineer.</h2>
+    </div>
+    <div class="fill">
+      <div class="lanes">
+        <div class="lane rise" style="--i:2">
+          <p class="label">Today · the engineering queue</p>
+          <div class="steps">
+            <span class="pill">Idea</span><span class="arrow">→</span><span class="pill">Spec</span><span class="arrow">→</span><span class="pill">Ticket</span><span class="arrow">→</span><span class="pill">Triage</span><span class="arrow">→</span><span class="pill">Roadmap queue</span>
+          </div>
+          <p class="time muted">Months</p>
+          <div class="bar"><i></i></div>
+        </div>
+        <div class="lane fast rise" style="--i:3">
+          <p class="label">With Alpha · an AI engineer in the team</p>
+          <div class="steps">
+            <span class="pill solid">Describe it</span><span class="arrow">→</span><span class="pill solid">Approve the plan</span><span class="arrow">→</span><span class="pill solid">Alpha builds and tests</span><span class="arrow">→</span><span class="pill hot">Live</span>
+          </div>
+          <p class="time accent">Same day</p>
+          <div class="bar" style="--w:22%"><i style="--w:22%"></i></div>
+        </div>
+      </div>
+      <p class="callout rise" style="--i:4">The person with the problem builds the fix, with the database, sign-in and hosting included.</p>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="problems" data-part="why" data-title="The problem">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow rise" style="--i:0">The problem</p>
+      <h2 class="title rise" style="--i:1">Three things companies tell us.</h2>
+    </div>
+    <div class="fill">
+      <div class="grid g3">
+        <div class="card fill-grey problem rise" style="--i:2">
+          <div class="art" aria-hidden="true">
+            <svg viewBox="0 0 240 72"><g fill="none" stroke="#CFCCC7" stroke-width="1.5"><rect x="8" y="22" width="40" height="28" rx="5"/><rect x="56" y="22" width="40" height="28" rx="5"/><rect x="104" y="22" width="40" height="28" rx="5"/><rect x="152" y="22" width="40" height="28" rx="5"/></g><rect x="200" y="22" width="32" height="28" rx="5" fill="#FE4B1E" opacity=".9"/><path d="M216 30v7l4 3" stroke="#1F2022" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg>
+          </div>
+          <p class="mono accent">01</p>
+          <p class="quote">“Our ideas wait months for engineering.”</p>
+          <p class="body">Specs become tickets, tickets join a queue, and the team works around it in spreadsheets.</p>
+          <hr class="rule">
+          <p class="label">With Alpha</p>
+          <p class="body fix">Describe it, approve the plan and see it working the same day.</p>
+        </div>
+        <div class="card fill-grey problem rise" style="--i:3">
+          <div class="art" aria-hidden="true">
+            <svg viewBox="0 0 240 72"><rect x="10" y="22" width="70" height="28" rx="6" fill="none" stroke="#CFCCC7" stroke-width="1.5"/><path d="M84 36h34" stroke="#A8A298" stroke-width="1.5" stroke-dasharray="4 4"/><path d="M122 30l8 12M130 30l-8 12" stroke="#FE4B1E" stroke-width="2" stroke-linecap="round"/><path d="M134 36h22" stroke="#A8A298" stroke-width="1.5" stroke-dasharray="4 4"/><rect x="160" y="22" width="70" height="28" rx="6" fill="#1F2022"/><circle cx="174" cy="36" r="4" fill="#FE4B1E"/></svg>
+          </div>
+          <p class="mono accent">02</p>
+          <p class="quote">“Our AI pilots never reach production.”</p>
+          <p class="body">Demos made in chat tools have no database, no sign-in, no hosting and no owner.</p>
+          <hr class="rule">
+          <p class="label">With Alpha</p>
+          <p class="body fix">The same session builds it, tests it, puts it live and runs it on a schedule.</p>
+        </div>
+        <div class="card fill-grey problem rise" style="--i:4">
+          <div class="art" aria-hidden="true">
+            <svg viewBox="0 0 240 72"><g fill="none" stroke="#CFCCC7" stroke-width="1.5"><rect x="10" y="14" width="64" height="20" rx="10"/><rect x="34" y="40" width="64" height="20" rx="10"/></g><path d="M104 36h40" stroke="#A8A298" stroke-width="1.5" stroke-dasharray="4 4"/><g fill="none" stroke="#FE4B1E" stroke-width="1.8" stroke-linecap="round"><rect x="152" y="20" width="44" height="34" rx="9"/><path d="M174 12v8M165 35v3M183 35v3"/></g><path d="M208 30l12 12M220 30l-12 12" stroke="#1F2022" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <p class="mono accent">03</p>
+          <p class="quote">“Our AI agents never get past the demo.”</p>
+          <p class="body">Agents need developer frameworks like LangGraph, testing on real conversations and somewhere to run. Few teams can do all three.</p>
+          <hr class="rule">
+          <p class="label">With Alpha</p>
+          <p class="body fix">Describe the agent. Alpha builds it in your framework, tests it and puts it live.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slide dark" id="market" data-part="why" data-title="Why now">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow rise" style="--i:0">Why now</p>
+      <h2 class="title rise" style="--i:1">Anyone can build. Few get it live.</h2>
+    </div>
+    <div class="fill">
+      <div class="market">
+        <div class="hero rise" style="--i:2">
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <p class="big"><span data-count="88">88</span>%</p>
+            <p class="lead" style="color:var(--g200)">of AI proofs of concept never reach wide deployment.</p>
+            <div class="meter"><i style="--w:88%"></i></div>
+            <p class="src">IDC · 2025</p>
+          </div>
+          <p class="callout">Building isn’t the hard part any more. Getting it live is: for applications, and even more for AI agents.</p>
+        </div>
+        <div class="stat-grid rise" style="--i:3">
+          <div class="stat"><p class="num"><span data-count="75">75</span>%</p><p class="body" style="color:var(--g200)">of new code at Google is now written by AI.</p><div class="meter"><i style="--w:75%"></i></div><p class="src">Google · Apr 2026</p></div>
+          <div class="stat"><p class="num"><span data-count="42">42</span>%</p><p class="body" style="color:var(--g200)">of companies dropped most of their AI projects, up from 17%.</p><div class="meter"><i style="--w:42%"></i></div><p class="src">S&amp;P Global · 2025</p></div>
+          <div class="stat"><p class="num"><span data-count="43">43</span>%</p><p class="body" style="color:var(--g200)">of data breaches involved AI tools IT never approved.</p><div class="meter"><i style="--w:43%"></i></div><p class="src">IBM · 2026</p></div>
+          <div class="stat"><p class="num"><span data-count="13">13</span>%</p><p class="body" style="color:var(--g200)">of CIOs say AI has delivered significant value so far.</p><div class="meter"><i style="--w:13%"></i></div><p class="src">Gartner · Oct 2026</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="ai-fde" data-part="why" data-title="What Alpha is">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow rise" style="--i:0">What Alpha is</p>
+      <h2 class="title wide rise" style="--i:1">An AI forward deployed engineer for every team.</h2>
+    </div>
+    <div class="fill">
+      <div class="fde">
+        <div class="rise" style="display:flex;flex-direction:column;gap:22px;--i:2">
+          <p class="label">The idea</p>
+          <p class="h3">A forward deployed engineer sits with a business team, learns the real problem and builds the fix on the spot.</p>
+          <p class="body">It’s how the AI labs get their biggest customers into production. Most teams never get one.</p>
+          <div class="dots-pair">
+            <div class="dots-card">
+              <p class="label">A human FDE</p>
+              <div class="dots" aria-label="One team of 24 gets an engineer">
+                <i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+              </div>
+              <p class="body">One team at a time</p>
+            </div>
+            <div class="dots-card">
+              <p class="label accent">Alpha</p>
+              <div class="dots all" aria-label="All 24 teams get an engineer">
+                <i class="on"></i><i style="--d:1"></i><i style="--d:2"></i><i style="--d:3"></i><i style="--d:4"></i><i style="--d:5"></i><i style="--d:6"></i><i style="--d:7"></i><i style="--d:8"></i><i style="--d:9"></i><i style="--d:10"></i><i style="--d:11"></i><i style="--d:12"></i><i style="--d:13"></i><i style="--d:14"></i><i style="--d:15"></i><i style="--d:16"></i><i style="--d:17"></i><i style="--d:18"></i><i style="--d:19"></i><i style="--d:20"></i><i style="--d:21"></i><i style="--d:22"></i><i style="--d:23"></i>
+              </div>
+              <p class="body">Every team, today</p>
+            </div>
+          </div>
+        </div>
+        <table class="compare rise" style="--i:3">
+          <tr><th></th><th>A human FDE</th><th>Alpha</th></tr>
+          <tr><td>Who gets one</td><td class="them">The biggest projects</td><td>Every team</td></tr>
+          <tr><td>How soon</td><td class="them">Weeks to staff and start</td><td>Today, in the browser</td></tr>
+          <tr><td>Who builds</td><td class="them">The FDE, for the team</td><td>The team, with Alpha</td></tr>
+          <tr><td>When it ends</td><td class="them">The team can’t change what was built</td><td>The team owns the code and keeps going</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 02 · ALPHA IN ACTION ================= -->
+
+<section class="slide" id="pillars" data-part="alpha" data-title="What Alpha promises">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow rise" style="--i:0">The promise</p>
+      <h2 class="title rise" style="--i:1">Three things Alpha promises.</h2>
+    </div>
+    <div class="fill">
+      <div class="pillars">
+        <div class="pillar rise" style="--i:2">
+          <p class="n">01</p>
+          <p class="h3">Every team builds</p>
+          <p class="body">Working software the same day, without waiting for engineering. No code and no setup.</p>
+          <div class="showit"><span class="label">In practice</span><p class="body" style="color:var(--black)">Alpha asks plain questions, shows a plan, and one sentence becomes a live app.</p></div>
+        </div>
+        <div class="pillar rise" style="--i:3">
+          <p class="n">02</p>
+          <p class="h3">Live, not just code</p>
+          <p class="body">Database, sign-in, hosting and deployment included. Engineers skip the setup and can take over the same code in GitHub.</p>
+          <div class="showit"><span class="label">In practice</span><p class="body" style="color:var(--black)">The app goes live behind a sign-in, in one click.</p></div>
+        </div>
+        <div class="pillar rise" style="--i:4">
+          <p class="n">03</p>
+          <p class="h3">AI agents you can trust</p>
+          <p class="body">Built as real code in the framework you choose, tested on realistic cases, and live with an API.</p>
+          <div class="showit"><span class="label">In practice</span><p class="body" style="color:var(--black)">You see an agent’s test results before it goes live.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slide dark" id="story" data-part="alpha" data-title="One team, end to end">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow rise" style="--i:0">How it works</p>
+      <h2 class="title wide rise" style="--i:1">One team’s problem, end to end.</h2>
+    </div>
+    <div class="fill">
+      <div class="grid story">
+        <div class="card rise" style="--i:2">
+          <p class="label">The team</p>
+          <p class="h3">A finance analyst checks cloud bills from AWS, Azure and Google Cloud by hand, every month.</p>
+          <hr class="rule">
+          <p class="label">The result</p>
+          <p class="body">The check now runs itself every Monday, and each mismatch lands in the team’s Slack.</p>
+        </div>
+        <div class="rise" style="--i:3">
+          <p class="label" style="padding-bottom:12px">What happens</p>
+          <div class="list-rows story-steps">
+            <div><span class="n">01</span><span class="h3">Describe</span><span class="body">The analyst types the problem in plain English.</span></div>
+            <div><span class="n">02</span><span class="h3">Plan</span><span class="body">Alpha asks a few questions and shows a plan to approve.</span></div>
+            <div><span class="n">03</span><span class="h3">Build</span><span class="body">The app appears. Point at the screen to change it.</span></div>
+            <div><span class="n">04</span><span class="h3">Connect</span><span class="body">Each mismatch goes to the team’s Slack.</span></div>
+            <div><span class="n">05</span><span class="h3">Publish</span><span class="body">It goes live, behind a sign-in.</span></div>
+            <div><span class="n">06</span><span class="h3">Schedule</span><span class="body">It runs every Monday, even with the session closed.</span></div>
+            <div><span class="n">07</span><span class="h3">Review</span><span class="body">IT sees the code in Git and the spend per person.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="builds" data-part="alpha" data-title="What it builds">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow rise" style="--i:0">What it builds</p>
+      <h2 class="title rise" style="--i:1">One AI engineer. Every kind of work.</h2>
+    </div>
+    <div class="fill">
+      <div class="grid g4 builds">
+        <div class="card rise" style="--i:2"><span class="icon"><svg><use href="#i-code"/></svg></span><p class="h3">Applications</p><p class="body">An expense approval app with sign-in and a database.</p></div>
+        <div class="card rise" style="--i:3"><span class="icon"><svg><use href="#i-agent"/></svg></span><p class="h3">AI agents</p><p class="body">In ten frameworks, tested before they go live. Voice agents too.</p></div>
+        <div class="card rise" style="--i:4"><span class="icon"><svg><use href="#i-clock"/></svg></span><p class="h3">Automations</p><p class="body">A morning news digest, every weekday.</p></div>
+        <div class="card rise" style="--i:5"><span class="icon"><svg><use href="#i-chart"/></svg></span><p class="h3">Spreadsheets</p><p class="body">A three-year financial model with charts.</p></div>
+        <div class="card rise" style="--i:6"><span class="icon"><svg><use href="#i-deck"/></svg></span><p class="h3">Decks and docs</p><p class="body">A ten-slide pitch deck, exported to PowerPoint.</p></div>
+        <div class="card rise" style="--i:7"><span class="icon"><svg><use href="#i-video"/></svg></span><p class="h3">Images and video</p><p class="body">A 30-second launch video for a new product.</p></div>
+        <div class="card rise" style="--i:8"><span class="icon"><svg><use href="#i-diagram"/></svg></span><p class="h3">Diagrams</p><p class="body">An architecture map of a delivery app.</p></div>
+        <div class="card rise" style="--i:9"><span class="icon"><svg><use href="#i-plug"/></svg></span><p class="h3">Tool connections</p><p class="body">Reads Gmail, posts to Slack, updates Notion.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="agents" data-part="alpha" data-title="AI agents">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow rise" style="--i:0">AI agents</p>
+      <h2 class="title wide rise" style="--i:1">Describe the agent. Alpha builds it, tests it and puts it live.</h2>
+    </div>
+    <div class="fill">
+      <div class="routine">
+        <div class="rise" style="--i:2;display:flex;flex-direction:column;gap:20px">
+          <p class="prompt">“Build a support agent that answers from our FAQ and hands off to email when it can’t help.”</p>
+          <div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px">
+            <span class="pill solid">Built in your framework</span><span class="muted">→</span><span class="pill solid">Tested on real cases</span><span class="muted">→</span><span class="pill hot">Live, with an API</span>
+          </div>
+          <p class="mono muted">The app that uses it is built in the same session.</p>
+        </div>
+        <div class="rise" style="--i:3">
+          <div class="list-rows">
+            <div><span class="n">01</span><span class="h3">Ten frameworks, including Google ADK, LangGraph, CrewAI and OpenAI Agents</span></div>
+            <div><span class="n">02</span><span class="h3">Tested on realistic cases and personas, graded by an AI judge</span></div>
+            <div><span class="n">03</span><span class="h3">Frameworks compared on the same tests</span></div>
+            <div><span class="n">04</span><span class="h3">Voice agents, phone calls included</span></div>
+            <div><span class="n">05</span><span class="h3">Real code your team owns, in your GitHub</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="routines" data-part="alpha" data-title="Work on a schedule">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow rise" style="--i:0">It keeps working</p>
+      <h2 class="title rise" style="--i:1">Work that runs while you’re away.</h2>
+    </div>
+    <div class="fill">
+      <div class="routine">
+        <div class="rise" style="--i:2;display:flex;flex-direction:column;gap:20px">
+          <p class="prompt">“Every weekday at 9, send me a summary of the top news in our industry.”</p>
+          <div class="week"><div class="day" style="--d:0"><span class="mono">Mon</span><span class="run"><svg><use href="#i-check"/></svg>9:00</span></div><div class="day" style="--d:1"><span class="mono">Tue</span><span class="run"><svg><use href="#i-check"/></svg>9:00</span></div><div class="day" style="--d:2"><span class="mono">Wed</span><span class="run"><svg><use href="#i-check"/></svg>9:00</span></div><div class="day" style="--d:3"><span class="mono">Thu</span><span class="run"><svg><use href="#i-check"/></svg>9:00</span></div><div class="day" style="--d:4"><span class="mono">Fri</span><span class="run"><svg><use href="#i-check"/></svg>9:00</span></div><div class="day off" style="--d:5"><span class="mono">Sat</span><span class="run idle">—</span></div><div class="day off" style="--d:6"><span class="mono">Sun</span><span class="run idle">—</span></div></div>
+          <p class="mono muted">The session is closed. Alpha wakes it for each run.</p>
+        </div>
+        <div class="rise" style="--i:3;display:flex;flex-direction:column;gap:12px">
+          <div class="list-rows">
+            <div><span class="n">01</span><span class="h3">Alpha writes it and tests it once</span></div>
+            <div><span class="n">02</span><span class="h3">Then schedules it, in plain English</span></div>
+            <div><span class="n">03</span><span class="h3">It runs even with the session closed</span></div>
+            <div><span class="n">04</span><span class="h3">Every run is logged; failures show in the chat</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 03 · FOR YOUR COMPANY ================= -->
+
+<section class="slide dark" id="control" data-part="company" data-title="Control for IT">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow rise" style="--i:0">Control</p>
+      <h2 class="title wide rise" style="--i:1">Speed for every team. Control for IT.</h2>
+    </div>
+    <div class="fill">
+      <div class="grid g2" style="gap:clamp(32px,5vw,80px)">
+        <div class="rise" style="--i:2">
+          <p class="label" style="padding-bottom:12px">Teams get</p>
+          <div class="list-rows">
+            <div><span class="icon"><svg><use href="#i-chat"/></svg></span><span class="h3">Plain English, nothing to install</span></div>
+            <div><span class="icon"><svg><use href="#i-bolt"/></svg></span><span class="h3">A working version the same day</span></div>
+            <div><span class="icon"><svg><use href="#i-sliders"/></svg></span><span class="h3">Claude Code or Codex, their choice</span></div>
+            <div><span class="icon"><svg><use href="#i-agent"/></svg></span><span class="h3">Agents in the framework they use</span></div>
+          </div>
+        </div>
+        <div class="rise" style="--i:3">
+          <p class="label" style="padding-bottom:12px">IT keeps</p>
+          <div class="list-rows">
+            <div><span class="icon"><svg><use href="#i-branch"/></svg></span><span class="h3">Code in your Git, ready for review</span></div>
+            <div><span class="icon"><svg><use href="#i-shield"/></svg></span><span class="h3">Agents that can’t go live until tests pass</span></div>
+            <div><span class="icon"><svg><use href="#i-gauge"/></svg></span><span class="h3">Usage and spend, per person</span></div>
+            <div><span class="icon"><svg><use href="#i-lock"/></svg></span><span class="h3">Ownership of everything Alpha builds</span></div>
+          </div>
+        </div>
+      </div>
+      <p class="callout rise" style="--i:4">You own the code. Your engineers review it like any other change.</p>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="enterprise" data-part="company" data-title="Ready for the company">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow rise" style="--i:0">Enterprise</p>
+      <h2 class="title wide rise" style="--i:1">Ready for the whole company, not one developer.</h2>
+    </div>
+    <div class="fill">
+      <div class="grid g4 ent">
+        <div class="ent-col rise" style="--i:2"><span class="icon"><svg><use href="#i-shield"/></svg></span><p class="h3">Secure by design</p><ul class="ent-list"><li>Every session runs in its own isolated machine</li><li>No AI keys inside the machine</li><li>Secrets encrypted and hidden in the chat</li></ul></div>
+        <div class="ent-col rise" style="--i:3"><span class="icon"><svg><use href="#i-sliders"/></svg></span><p class="h3">Admin control</p><ul class="ent-list"><li>One dashboard of every user, session and app</li><li>Admins choose which tools teams can use</li></ul></div>
+        <div class="ent-col rise" style="--i:4"><span class="icon"><svg><use href="#i-gauge"/></svg></span><p class="h3">Identity and spend</p><ul class="ent-list"><li>Sign in with Google or Microsoft</li><li>Only your company’s emails get in</li><li>Usage and spend per person, with caps</li></ul></div>
+        <div class="ent-col rise" style="--i:5"><span class="icon"><svg><use href="#i-agent"/></svg></span><p class="h3">Safe AI agents</p><ul class="ent-list"><li>Agents in any framework</li><li>Tests before an agent goes live</li><li>Claude Code or Codex, per project</li><li>Code in your Git, reviewed by your engineers</li></ul></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="questions" data-part="company" data-title="Questions we hear">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow rise" style="--i:0">Questions</p>
+      <h2 class="title rise" style="--i:1">Questions we often hear.</h2>
+    </div>
+    <div class="fill">
+      <div class="grid g4">
+        <div class="card fill-grey objection rise" style="--i:2"><p class="label">Your tools</p><p class="q">“We already have Copilot and Copilot Studio.”</p><p class="body">Keep them. Use Alpha for the production software and AI agents you want to own, built together, in your GitHub.</p></div>
+        <div class="card fill-grey objection rise" style="--i:3"><p class="label">Your tools</p><p class="q">“Our engineers use Claude Code or Codex.”</p><p class="body">Good: Alpha runs both, puts them in every team’s hands, and adds the database, sign-in and hosting.</p></div>
+        <div class="card fill-grey objection rise" style="--i:4"><p class="label">Your tools</p><p class="q">“Our engineers could build this themselves.”</p><p class="body">They could, but it’s a year of platform work. Alpha lets them spend that year on your product.</p></div>
+        <div class="card fill-grey objection rise" style="--i:5"><p class="label">Risk</p><p class="q">“AI-written code is risky.”</p><p class="body">It lives in your Git, your engineers can review it, and agents can’t go live until their tests pass.</p></div>
+        <div class="card fill-grey objection rise" style="--i:6"><p class="label">Risk</p><p class="q">“What about security and our data?”</p><p class="body">Each project runs in its own isolated machine with no AI keys inside, and only your company’s emails get in.</p></div>
+        <div class="card fill-grey objection rise" style="--i:7"><p class="label">Risk</p><p class="q">“Will we be locked in?”</p><p class="body">No. Pick Claude Code or Codex, build agents in open frameworks, and keep the code.</p></div>
+        <div class="card fill-grey objection rise" style="--i:8"><p class="label">Fit</p><p class="q">“Our people aren’t technical.”</p><p class="body">That’s who it’s for: plain-English questions and a plan before anything is built.</p></div>
+        <div class="card fill-grey objection rise" style="--i:9"><p class="label">Fit</p><p class="q">“We don’t know what to build.”</p><p class="body">Most teams don’t at first. We’ll pick a first project together, team by team.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slide dark" id="summary" data-part="company" data-title="Alpha in one page">
+  <div class="wrap">
+    <div class="head">
+      <div class="row rise" style="--i:0"><p class="eyebrow">Summary</p><img src="assets/lyzr-lockup-white.svg" alt="Lyzr" style="width:150px"></div>
+      <h2 class="title rise" style="--i:1">Alpha in one page.</h2>
+    </div>
+    <div class="fill">
+      <div class="summary-cols rise" style="--i:2">
+        <div><p class="label" style="padding-bottom:10px">01 · Why Alpha</p><p>Every team has ideas that wait for engineering.</p><p>AI writes code now. Getting it live is the hard part.</p><p>Alpha is an AI forward deployed engineer for every team.</p></div>
+        <div><p class="label" style="padding-bottom:10px">02 · What it does</p><p>Applications, AI agents and automations, live the same day.</p><p>Database, sign-in and hosting included.</p><p>AI agents tested before they go live, in the framework you choose.</p></div>
+        <div><p class="label" style="padding-bottom:10px">03 · What you keep</p><p>The code, in your Git.</p><p>Control for IT: tools, usage and spend.</p><p>Your choice of coding agent: Claude Code or Codex.</p></div>
+      </div>
+      <div class="next-card rise" style="--i:3">
+        <div><p class="label">Start small</p><p>One team and one real problem. Prove it in weeks, then grow.</p></div>
+        <div><p class="label">Next step</p><p>Your Lyzr contact can set up a walkthrough for your team.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- navigation -->
+<header class="topbar" aria-label="Presentation">
+  <div class="tb-left"><img class="tb-mark" src="assets/favicon.svg" alt=""><span class="tb-brand">Alpha</span><span class="tb-where mono" id="where"></span></div>
+  <div class="tb-right"><span class="mono tb-count" id="count"></span><button class="tb-menu" id="menuBtn" aria-label="Menu (M)"><span class="mono">Menu</span><svg viewBox="0 0 24 24"><path d="M4 8h16M4 16h16"/></svg></button></div>
+  <div class="tb-progress"><i id="progressFill"></i><span id="ticks"></span></div>
+</header>
+<nav class="pager" aria-label="Slides">
+  <button class="pg" id="prevBtn" aria-label="Previous slide"><svg viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+  <button class="pg next" id="nextBtn" aria-label="Next slide"><svg viewBox="0 0 24 24"><use href="#i-arrow"/></svg></button>
+</nav>
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer right" id="outline" aria-label="Menu">
+  <header><div><h2>Alpha by Lyzr</h2><span class="mono" id="outlineMeta"></span></div><button class="close" data-close aria-label="Close"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button></header>
+  <div class="menu-controls">
+    <button class="mc" id="fullBtn"><svg viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg><span>Full screen</span><kbd>F</kbd></button>
+  </div>
+  <p class="mono menu-hint">← → or swipe to move between slides</p>
+  <div class="scroll outline" id="outlineList"></div>
+</aside>
+
+<script src="app.js"></script>
+</body>
+</html>
